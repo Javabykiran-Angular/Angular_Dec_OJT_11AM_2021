@@ -1,0 +1,24 @@
+<p>event-binding2 works!</p>
+<!-- 
+<input #inputnum1 type="number" placeholder="Enter the Num1"> <br><br>
+<input #inputnum2 type="number" placeholder="Enter the Num2"> <br><br>
+<button (click)="onAddition(inputnum1.value,inputnum2.value)">Addition</button> <br><br>
+<input type="text" placeholder="Result" [value]="result"> <br><br>
+<hr>
+
+<input type="text" (change)="onChange()" placeholder="Enter the Name">
+<hr>
+
+<input type="text" (keyup)="onKeyup()" placeholder="Keyup event"> <br><br>
+<input type="text" (keydown)="onKeydown()" placeholder="Keydown event"> -->
+
+<!-- two way bindig 
+
+    ngModel => It is attribute directive
+    [(ngModel)]="PropertyName"
+  if u want use ngModel for that u have to import one module is called FormsModule
+-->
+
+<input type="text" [(ngModel)]="name" placeholder="Enter the Name..." >
+<br>
+<h2> {{name}} </h2>
