@@ -1,0 +1,29 @@
+<p>if-directive works!</p>
+<!-- 
+structural directive => with the help of struc. direct.we can manipulate or hide or display dynamically to update your DOM Structure
+  1 if directive
+  
+  2 for directive
+  3 switch directive
+-->
+
+<!-- <div *ngIf="rating<4" >
+  <h2> Condition is true </h2>
+
+</div> -->
+<br><br>
+<div *ngIf="rating1<4;else elsepart">
+  <h2> Condition is true </h2>
+
+
+</div> <br><br>
+
+<!-- <div #elsepart>
+  <h2> Condition is False </h2>
+</div> -->
+
+<ng-template #elsepart>
+  <h2> Condition is False </h2>
+</ng-template>
+
+
