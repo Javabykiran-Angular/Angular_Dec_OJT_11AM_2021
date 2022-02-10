@@ -1,0 +1,27 @@
+
+input{
+  padding: 5px;
+  border: 1px solid blueviolet;
+  border-radius: 5px;
+}
+
+button{
+  text-transform: uppercase;
+  padding: 5px;
+  margin-left: 5px;
+  border-radius: 8px;
+  background-color: aquamarine;
+}
+
+button:hover{
+  background-color: darkorange;
+  color: white;
+  border: 5px solid green;
+  
+}
+
+.mydiv{
+  width: 350px;
+  height: 250px;
+  border: 2px solid;
+}
