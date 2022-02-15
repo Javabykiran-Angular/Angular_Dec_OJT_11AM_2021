@@ -1,0 +1,18 @@
+<p>parent works!</p>
+
+<h2> Data ===> {{StrDatafromChild}} </h2>
+
+<h2> ID :: {{jsonDataFromChild.id}} </h2>
+<h2> First Name :: {{jsonDataFromChild.fname}} </h2>
+
+<h2> Role :: {{jsonDataFromChild.role}} </h2>
+
+<hr>
+<!-- <app-child1 [ParentStrData]="strdata"
+    [ParentJsonData]="jsondata"
+></app-child1> -->
+<app-child2 (ChildStrEvent)="StrDatafromChild=$event"
+(ChildJsonEvent)="jsonDataFromChild=$event"
+>
+
+</app-child2>

@@ -1,0 +1,27 @@
+<p>task5 works!</p>
+
+<label for="">ID:: &nbsp;&nbsp;</label>
+<input #id type="text" placeholder="Enter the ID"> <br><br>
+<label for="">Name:: &nbsp;&nbsp;</label>
+<input #name type="text" placeholder="Enter the Name"> <br><br>
+<label for="">Salary:: &nbsp;&nbsp;</label>
+<input #sal type="text" placeholder="Enter the Salary"> <br><br>
+
+<button (click)="OnAdd(id.value,name.value,sal.value)">ADD</button> <br><br>
+
+<table>
+  <thead>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Salary</th>
+    <th>Action</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of EmpData;index as i">
+      <td> {{item.id}} </td>
+      <td> {{item.name}} </td>
+      <td> {{item.salary}} </td>
+      <td><button (click)="onRemove(i)">Remove</button></td>
+    </tr>
+  </tbody>
+</table>
