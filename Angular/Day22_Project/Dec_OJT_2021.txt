@@ -1,0 +1,134 @@
+
+registeration
+	id => 	primary Key=> autoincrement
+	username => varchar => 50
+	password; => varchar =>50
+	emailId; => varchar => 250 => unique 
+	name	=> varchar => 50
+	address => varchar => 250
+	gender => varchar => 20
+	mobile no => varchar => 50
+	createdDate => DateTime
+
+Entity Class
+
+@Entity
+class Register implemnts Serialiazlable {
+	
+	@Id
+	@generateVale(startargy=GenterationType.identity)
+	Interger Id;
+	String username;
+	@Coloum(name="emailId",)
+	String emailId;
+	Date createdDate;	
+	
+	String password;
+	
+	//getter & setter
+	//tostring
+	//both constructor 
+	
+	
+}
+
+//set Annotated class in config class
+
+@RestController
+@RequestMapping("/api")
+class MainController{
+
+
+@PostMapping("/login")
+public HashMap LoginCheck(@RequestBody Register reg){
+	
+	HashMap jmap=sercice.LoginCheck(reg)
+	
+	return jmap
+	
+}	
+}
+
+service.jsva
+
+public HashMap LoginCheck( Register reg){
+	
+	Register regobj=dao.LoginCheck(reg);
+	HashMap map=new HashMap();
+	
+	
+		if(reg==null){
+			map.put("msg","Invalid User");
+			map.put("user",regobj)
+		}else{
+			map.put("msg","valid user");
+			map.put("user",regobj)
+			regobj.setPassword("********")
+			
+		}
+	
+	return map;
+	
+}	
+
+dao.java
+	
+	public Register LoginCheck( Register reg){
+	
+		sessinFactory =open session
+		Criteria criteria=...create criteria
+		
+		criteria.addReq(reg.getemailid());
+		criteria.addReq(reg.getPassword());
+			Register reg1= uniqueResult();
+		retirn reg1
+	
+}	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
